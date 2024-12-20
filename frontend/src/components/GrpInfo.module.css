@@ -1,0 +1,145 @@
+.grpInfoWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+.grpInfo{
+    flex-grow: 1;
+    height: 1px;
+    overflow: auto;
+}
+.grpInfo::-webkit-scrollbar{
+    width: 0px;
+}
+.secImg{
+    width: 100%;
+    aspect-ratio: 5;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.imgWrapper{
+    position: relative;
+}
+.prImg{
+    height: 8rem;
+    aspect-ratio: 1;
+    position: absolute;
+    left:10px;
+    bottom:0px;
+    transform: translateY(45%);
+    border-radius: 100%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+.title{
+    position: absolute;
+    left: 9rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.caption{
+    margin-top: 60px;
+    padding: 0 20px
+}
+.subTitle{
+    padding: 0 20px;
+    margin-top: 20px;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.member{
+    background-color: rgb(218, 218, 241);
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.memberImg{
+    height: 4rem;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+.memberName{
+    flex-grow: 1;
+    font-size: 1.5rem;
+}
+.memberButton{
+    aspect-ratio: 1;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: all 0.2s;
+}
+.memberButton:hover{
+    background-color: rgb(194, 194, 241);
+}
+.memberButton:active{
+    background-color: rgb(171, 171, 238);
+}
+.memberButtonIcon{
+    font-size: 1.7rem;
+}
+.back{
+    position: absolute;
+    top:10px;
+    left:10px;
+    padding:5px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.315);
+    border-radius: 100%;
+    transition: all 0.3s;
+}
+.back:hover{
+    background-color: rgba(0, 0, 0, 0.479);
+}
+.back:active{
+    background-color: rgba(0, 0, 0, 0.603);
+}
+.backIcon{
+    font-size: 1.4rem;
+    color:white
+}
+.lightBox{
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confirmBox{
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    font-size: 1.7rem;
+}
+.confirmControls{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.yes{
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color:white;
+}
+.no{
+    background-color: lightblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color:white;
+    
+}

@@ -1,0 +1,71 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.navBar{
+    height:3.3rem;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    color: var(--text);
+}
+.line{
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+.logo{
+    height: 2rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: azure;
+}
+.navBarDiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.title{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.link{
+    font-size: 1.1rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: var(--text)
+}
+.link::after{
+    transition: all 0.3s;
+    border-radius: 5px;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+}
+.link:hover::after{
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.active::after{
+    transition: all 0.3s;
+    border-radius: 5px;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s;
+}

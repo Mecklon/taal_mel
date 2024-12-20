@@ -1,0 +1,68 @@
+.notifications{
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1500px;
+    background-color: lightblue;
+    padding: 20px;
+    overflow: auto;
+}
+.notifications::-webkit-scrollbar{
+    width: 0px;
+}
+.notification{
+    background-color: grey;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+}
+.unseen{
+    background-color: rgb(119, 197, 223);
+}
+.dot{
+    height: 0.6rem;
+    background-color: blue;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+.noDot{
+    background-color: transparent;
+}
+.img{
+    height: 4rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    align-self: flex-start;
+}
+.notifDiv{
+    flex-grow: 1;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.button{
+    display: inline-block;
+    margin-top:2rem;
+    margin-right: 1rem ;
+    padding: 0.5rem 1.5rem;
+    border-radius: 100px;
+    border: 3px solid black;
+    transition: all 0.3s;
+}
+.button:hover{
+    transform: scale(0.97);
+}
+.button:active{
+    transform: scale(0.93);
+}
+.accept:hover{
+    background-color: blue;
+    color: white;
+    border: 3px solid blue;
+}
+.reject:hover{
+    background-color: red;
+    color: white;
+    border: 3px solid red;
+}

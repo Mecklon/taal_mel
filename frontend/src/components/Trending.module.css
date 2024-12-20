@@ -1,0 +1,179 @@
+.trendingWrapper {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.Trending {
+  background-color: lightcoral;
+  max-width: 1500px;
+  gap: 20px;
+  display: flex;
+}
+.search{
+  background-color: lavender;
+  width: 100%;
+  max-width: 1500px;
+  padding: 10px;
+}
+.searchInput{
+  background-color: white;
+  width: 50%;
+  font-size: 1rem;
+  color:black;
+  padding: 10px;
+  border-radius: 5px;
+}
+.scroll {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.posts {
+  background-color: lightgreen;
+  padding-top: 10px;
+  overflow: auto;
+  flex-grow: 1;
+  height: 1px;
+}
+.posts::-webkit-scrollbar {
+  width: 0;
+}
+.post {
+  background-color: aquamarine;
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.media {
+  background-color: lightcoral;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: contain;
+}
+.postTitle {
+  font-size: 2rem;
+  margin-top: 5px;
+}
+.postDesc {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.postButtons {
+  display: flex;
+  gap: 10px;
+}
+.postButtonWrapper {
+  background-color: grey;
+  display: flex;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.postButton {
+  padding: 9px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 100px;
+}
+.postButton:hover {
+  background-color: rgb(56, 56, 56);
+}
+.postButtonIcon {
+  font-size: 1.3rem;
+  color: white;
+}
+.profile{
+    height: 3rem;
+    aspect-ratio: 1;
+    object-position: center;
+    border-radius: 100%;
+}
+.postHeader{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.name{
+    font-size: 1.3rem;
+}
+.ads {
+  background-color: bisque;
+  max-width: 400px;
+  width: 20%;
+  flex-shrink: 0;
+}
+.comments{
+  margin-top: 20px;
+}
+.comment{
+  background-color: grey;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.commentHeader{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.commentProfile{
+  height: 2.1rem;
+  aspect-ratio: 1;
+  object-position:  center center;
+  border-radius: 100%;
+}
+.commentContent{
+  margin-left: 2.5rem;
+}
+.commentInputWrapper{
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border: 1px solid grey;
+}
+.commentInputWrapper:has(textarea:focus){
+  border: 1px solid black;
+}
+.padding{
+  color:grey;
+  border-radius: 100px;
+  padding: 15px 20px;
+}
+.commentInput{
+  width: 100%;
+  resize: vertical;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  outline:none
+}
+.commentButtons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.commentInput{
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+}
+.commentButton{
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 100px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.cancel{
+  background-color: grey;
+}
+.send{
+  background-color: rgb(128, 0, 64);
+}

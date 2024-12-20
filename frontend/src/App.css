@@ -1,0 +1,20 @@
+*{
+  padding: 0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+:root{
+  --text:#222222;
+  --backGround: white
+  --primary:#dfe0f1;
+  --secondary:#0d1691;
+  --accent:#2634fd;
+}
+body{
+  background-color: var(--backGround);
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+#root{
+  height: 100vh;
+}

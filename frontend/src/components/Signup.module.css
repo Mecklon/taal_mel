@@ -1,0 +1,167 @@
+.auth{
+    height: 100%;
+    display: flex;
+    background-color: rgb(18, 20, 49);
+}
+.authContainer{
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.authForm{
+    font-family: "Roboto", serif;
+    height: 100%;
+    
+    display: flex;
+    width: 80%;
+    margin-top: 20%;
+    flex-direction: column;
+}
+.authTitle{
+    color: var(--text);
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.link{
+    color: grey;
+    margin-bottom: 4.5rem;
+    font-size: 1.5rem;
+}
+.link2:active{
+    color: blue
+}
+.input{
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 20px 15px;
+    margin: 1rem 3rem;
+    width: 100%;
+    margin-left: 0;
+    border: none;
+    transition: all 0.2s;
+    color: white;
+    background-color: rgb(75, 75, 75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+
+.input:focus{
+    transition: all 0.2s;
+    outline: 3px solid var(--secondary);
+}
+
+.submit{
+    border-radius: 5px;
+    margin: 1rem 3rem;
+    margin-left: 0;
+    padding: 15px 10px;
+    color: var(--text);
+    font-size: 1.2rem;
+    border: 0;
+    background-color: var(--secondary);
+    transition: all 0.3s;
+    width: 100%;
+    position: relative;
+    gap: 20px;
+}
+.submit:hover{
+    transform: scale(0.98);
+}
+.submit:active{
+    transform: scale(0.95);
+}
+.carousel{
+    background-color: red;
+    width: 95%;
+    height: 95%;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.inputWrapper{
+    position: relative;
+}
+.error{
+    position: absolute;
+    color: red;
+    top: -5px;
+    transition: all 0.3s;
+}
+.otpError{
+    color:red;
+    font-size: 1.5rem;
+}
+.errorInput{
+    transition: all 0.2s;
+    outline: 3px solid red;
+}
+.rolling{
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+.eye{
+    color:white;
+    font-size: 2rem;
+}
+.input:has(input:focus){
+    transition: all 0.2s;
+    outline: 3px solid var(--secondary);
+}
+.input:has(.eye){
+    padding:15px;
+}
+input{
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    color: white;
+    font-size: 1rem;
+}
+.otpWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color:white;
+}
+.otpEmail{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.otpHeader{
+    font-size: 3rem;
+}
+.otpInputWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0px;
+}
+.otpInput{
+    width: 4rem;
+    text-align: center;
+    caret-color: transparent;
+    font-size: 4rem;
+    border-radius: 0.5rem;  
+    border: 3px solid white;
+    transition: border 0.2s;
+}
+.otpLoader{
+    height: 4rem;
+}
+
+.otpInput:focus{
+    border: 3px solid blue;
+
+}
