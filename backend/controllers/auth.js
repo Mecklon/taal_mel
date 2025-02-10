@@ -38,8 +38,8 @@ const handleOtp = async(req,res)=>{
     } catch (error) {
         return res.status(400).json({error:"something went wrong"})
     }
-    const token = makeToken({email,name})
-    res.cookie("authToken", token, { maxAge: 990000 })
+    const token = makeToken(email)
+    res.cookie("authToken", token, { maxAge: 990000 }) 
     return res.json({email,name})
 }
 

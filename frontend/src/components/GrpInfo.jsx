@@ -15,7 +15,7 @@ const GrpInfo = ({ setGrpInfo }) => {
   const [memberSet, setMemberSet] = useState(new Set());
   const [fetching, setFetching] = useState(false);
   const [members, setMembers] = useState([]);
-  const { user } = useAuthContext();
+  const {user} = useAuthContext();
   const admin = useRef(null);
   const [confirm, setConfirm] = useState(false);
   const [confirmType, setConfirmType] = useState(null);

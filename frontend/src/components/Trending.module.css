@@ -1,8 +1,55 @@
 .trendingWrapper {
   width: 100%;
+  max-width: 1500px;
   flex-grow: 1;
   display: flex;
   justify-content: center;
+}
+.settingsWrapper{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.settings{
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+  position: relative;
+  z-index: 1;
+}
+
+.settings:hover{
+  background-color: rgb(65, 65, 65);
+}
+.settingsOption{
+  font-size: 1.2rem;
+  padding: 7px 10px;
+  display: block;
+  text-decoration: none;
+  color:black;
+  background-color: grey;
+}
+.settingsOption:hover{
+  background-color: rgb(65, 65, 65);
+  
+
+}
+.settingsOptions{
+  text-wrap: nowrap;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  top:100%;
+  right:0px;
+  
+}
+.settingsIcon{
+  font-size: 1.8rem;
 }
 .Trending {
   background-color: lightcoral;
@@ -15,14 +62,29 @@
   width: 100%;
   max-width: 1500px;
   padding: 10px;
+  display: flex;
+  gap:10px;
 }
-.searchInput{
+.searchInputWrapper{
   background-color: white;
-  width: 50%;
   font-size: 1rem;
   color:black;
+  flex-grow: 1;
   padding: 10px;
   border-radius: 5px;
+  display: flex;
+}
+.searchInputIcon{
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+.searchInputIcon:hover{
+  transform: scale(1.1);
+}
+.searchInput{
+  color: black;
+  font-size: 1.1rem;
+  flex-grow: 1;
 }
 .scroll {
   display: flex;
@@ -47,10 +109,11 @@
   margin-bottom: 10px;
 }
 .media {
-  background-color: lightcoral;
+  background-color: black;
   width: 100%;
   border-radius: 15px;
   object-fit: contain;
+  aspect-ratio: 2;
 }
 .postTitle {
   font-size: 2rem;
@@ -66,13 +129,14 @@
   gap: 10px;
 }
 .postButtonWrapper {
+  font-size: 1.2rem;
   background-color: grey;
   display: flex;
   border-radius: 100px;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  padding-right: 10px;
+  padding-right: 15px;
   margin-top: 10px;
 }
 .postButton {
@@ -107,7 +171,7 @@
 .ads {
   background-color: bisque;
   max-width: 400px;
-  width: 20%;
+  width: 20vw;
   flex-shrink: 0;
 }
 .comments{
@@ -165,15 +229,101 @@
   font-size: 1.1rem;
 }
 .commentButton{
-  font-weight: 500;
+  font-weight: 500 !important;
+  font-size: 1rem;
   padding: 10px 15px;
   border-radius: 100px;
   margin-bottom: 5px;
   margin-right: 5px;
+  border: none;
 }
 .cancel{
   background-color: grey;
 }
 .send{
   background-color: rgb(128, 0, 64);
+}
+.views{
+  align-self: center;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+.upVoted{
+  color:blue
+}
+.downVoted{
+  color:red
+}
+.dropBoxHeader{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  background-color: grey;
+  padding: 7px 20px;
+  border-radius: 5px;
+  display: flex;
+  gap:10px;
+  justify-content: center;
+  font-size: 1.2rem;
+  align-items: center
+}
+
+.dropBox{
+  font-size: 1rem;
+  background-color: rgb(70, 70, 70);
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  left:0;
+  top: calc(100% + 10px)
+}
+.dropBoxOptions{
+  overflow: auto;
+  max-height: 300px;
+}
+.dropBoxOption{
+  padding: 5px 20px;
+  text-align: start;
+  outline:none
+}
+
+.dropBoxOption:hover ,.dropBoxOption:focus{
+  background-color: rgb(53, 53, 53);
+}
+.dropBoxInput{
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color:  black;
+}
+.searchButton{
+  padding: 10 20px;
+  font-size: 1.1rem;
+  background-color: rgb(60, 60, 248);
+  border: none;
+  border-radius: 10px;
+}
+.more{
+  background-color: grey;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.moreIcon{
+  font-size: 1rem;
+}
+.system{
+  font-size: 3rem;
+  margin: 0px 5rem;
+  text-align: center;
+  margin-top: 40%;
+  transform: translateY(-50%);
+}
+.remoteCheckWrapper{
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.1rem;
 }

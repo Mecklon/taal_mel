@@ -1,7 +1,7 @@
 .auth{
     height: 100%;
     display: flex;
-    background-color: rgb(18, 20, 49);
+    background-color: rgba(111, 120, 248, 0.884);
 }
 .authContainer{
     height: 100%;
@@ -27,7 +27,7 @@
     margin-bottom: 2rem;
 }
 .link{
-    color: grey;
+    color: rgb(56, 56, 56);
     margin-bottom: 4.5rem;
     font-size: 1.5rem;
 }
@@ -78,7 +78,7 @@
     transform: scale(0.95);
 }
 .carousel{
-    background-color: red;
+    background-color: rgb(255, 162, 162);
     width: 95%;
     height: 95%;
     border-radius: 15px;

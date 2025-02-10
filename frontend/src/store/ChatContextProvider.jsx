@@ -61,7 +61,6 @@ const ChatContextProvider = ({children})=>{
               }
         })
         socket.on("newGrp",(data)=>{
-            console.log(data)
             setContacts(prev=>[...prev,data])
             socket.emit("joinGrp",data.Rid)
         })

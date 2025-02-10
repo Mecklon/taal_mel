@@ -21,7 +21,7 @@ const Site = () => {
               Network
             </Link>
             <Link to="/trending" className={`${style.link} ${location.pathname === "/trending"?style.active:""}`}>Trending</Link>
-            <Link className={style.link}>Opportunities</Link>
+            <Link to='/opportunities' className={`${style.link} ${location.pathname.startsWith("/opportunities")?style.active:""}`}>Opportunities</Link>
             <Link to="/notifications" className={style.link}>Notifications</Link>
           </div>
         </div>

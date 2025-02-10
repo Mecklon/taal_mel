@@ -40,12 +40,12 @@ const Mkgrp = ({setFilter}) => {
 
   const handleMkGrp = async () => {
     setError(false)
-    if(title.current.value === ""){
+    if(title.current.value.trim() === ""){
       setError("Enter a title for the group")
       return;
     }
     const formData = new FormData()
-    formData.append("title",title.current.value)
+    formData.append("title",title.current.value.trim())
     formData.append("caption",desc.current.value)
     formData.append("imgs",image.current.files[0])
     formData.append("imgs",image2.current.files[0])

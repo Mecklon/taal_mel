@@ -4,7 +4,7 @@ import style from "./Messages.module.css";
 import MessImg from "./MessImg";
 const RecMess = ({ data, formatTimestamp }) => {
   const { currRoom } = useChatContext();
-  console.log(data)
+
   return (
     <div className={style.messWrapper}>
       {currRoom.isGroup ? (

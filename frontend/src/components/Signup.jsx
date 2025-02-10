@@ -32,11 +32,11 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
-    if (name.current.value === "") {
+    if (name.current.value.trim() === "") {
       setError({ index: 1, error: "Enter your name" });
       return;
     }
-    if (email.current.value === "") {
+    if (email.current.value.trim() === "") {
       setError({ index: 2, error: "Enter your email" });
       return;
     }
@@ -45,7 +45,7 @@ const Signup = () => {
       setError({ index: 2, error: "Enter a proper email" });
       return;
     }
-    if (password.current.value === "") {
+    if (password.current.value.trim() === "") {
       setError({ index: 3, error: "Enter your password" });
       return;
     }
@@ -67,7 +67,7 @@ const Signup = () => {
       },
       credentials: "include",
       body: JSON.stringify({
-        email: email.current.value,
+        email: email.current.value.trim(),
       }),
     });
     setFetching(false);
@@ -78,9 +78,9 @@ const Signup = () => {
       setError(json);
       return;
     }
-    otpEmail.current = email.current.value;
-    otpPassword.current = password.current.value;
-    otpName.current = name.current.value;
+    otpEmail.current = email.current.value.trim();
+    otpPassword.current = password.current.value.trim();
+    otpName.current = name.current.value.trim();
     setVerify(true);
     name.current.value = "";
     password.current.value = "";
@@ -96,7 +96,6 @@ const Signup = () => {
         const otp = Array.from(document.querySelectorAll(`.${style.otpInput}`))
           .map((input) => input.value)
           .join("");
-        console.log(`OTP entered: ${otp}`);
         setFetching(true)
         const data = await fetch("http://localhost:8000/auth/verifyOtp", {
           method: "post",
@@ -108,7 +107,7 @@ const Signup = () => {
             email: otpEmail.current,
             otp,
             name: otpName.current,
-            password: otpPassword.current,
+            password: otpPassword.current
           }),
         });
         const json = await data.json();
@@ -148,7 +147,7 @@ const Signup = () => {
             <form action="" className={style.authForm} onSubmit={handleSubmit}>
               <div className={style.authTitle}>Create an account</div>
               <div className={style.link}>
-                Already have an account link?{" "}
+                Already have an account?{" "}
                 <Link className={style.link2} to="/login">
                   {" "}
                   Log in

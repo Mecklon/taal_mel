@@ -1,0 +1,34 @@
+.lightBox{
+    background-color: rgba(0, 0, 0, 0.514);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset : 0 0 0 0;
+    z-index: 2;
+}
+.box{
+    background-color: white;
+    padding: 30px 30px;
+    border-radius: 10px;
+}
+.question{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+.controls div{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.yes{
+    background-color: red;
+}
+.no{
+    background-color: blue;
+}

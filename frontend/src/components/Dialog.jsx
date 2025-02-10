@@ -60,9 +60,10 @@ const Dialog = () => {
 
   const handleSendMessage = async(e)=>{
     e.preventDefault()
-    if(!file.current.files[0] && !input.current.value)return
+    if(!file.current.files[0] && (!input.current.value || input.current.value.trim()===""))return
+  
     const formData = new FormData()
-    formData.append("content",input.current.value)
+    formData.append("content",input.current.value.trim())
     formData.append("receiver",currRoom.email)
     formData.append("Rid",currRoom.Rid)
     formData.append("file",file.current.files[0])

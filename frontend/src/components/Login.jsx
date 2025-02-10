@@ -19,22 +19,22 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
-    if (email.current.value === "") {
+    if (email.current.value.trim() === "") {
       setError({ index: 1, error: "Enter your email" });
       return;
     }
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!regex.test(email.current.value)) {
+    if (!regex.test(email.current.value.trim())) {
       setError({ index: 1, error: "Enter a proper email" });
       return;
     }
-    if (password.current.value === "") {
+    if (password.current.value.trim() === "") {
       setError({ index: 2, error: "Enter your password" });
       return;
     }
     const regex2 =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
-    if (!regex2.test(password.current.value)) {
+    if (!regex2.test(password.current.value.trim())) {
       setError({
         index: 2,
         error:
@@ -50,8 +50,8 @@ const Login = () => {
       },
       credentials: "include",
       body: JSON.stringify({
-        email: email.current.value,
-        password: password.current.value,
+        email: email.current.value.trim(),
+        password: password.current.value.trim(),
       }),
     });
     setFetching(false);
@@ -69,10 +69,10 @@ const Login = () => {
         <div className={style.authContainer}>
           <form action="" className={style.authForm} onSubmit={handleSubmit}>
             <div className={style.authTitle}>
-              Welcome back, login the connect
+              Welcome back, login to connect
             </div>
             <div className={style.link}>
-              Don't have an account link?{" "}
+              Don't have an account?{" "}
               <Link className={style.link2} to="/signup">
                 {" "}
                 Sign up
@@ -102,7 +102,7 @@ const Login = () => {
               >
                 <input
                   ref={password}
-                  placeholder="Set a password"
+                  placeholder="password"
                   id="password"
                   type={hidden ? "password" : "text"}
                 />
@@ -120,7 +120,7 @@ const Login = () => {
               </label>
             </div>
             <button disabled={fetching} className={style.submit}>
-              Create Account
+              Log in
               {fetching && (
                 <img className={style.rolling} src={rolling} alt="" />
               )}

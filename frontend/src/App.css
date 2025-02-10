@@ -18,3 +18,7 @@ body{
 #root{
   height: 100vh;
 }
+textarea{
+  font-family: "Roboto", sans-serif;
+
+}
